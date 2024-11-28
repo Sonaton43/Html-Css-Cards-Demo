@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 01</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #212121;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #f700ff;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "SONATON";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+/*
+.card .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+}
+*/
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #f700ff;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 mb-5 w-100">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Demo Cards</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Card1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card2.html">Card2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card3.html">Card3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card4.html">Card4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card5.html">Card5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="card6.html">Card6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card">
+
+        <div class="imgBox">
+          <img src="img/mouse.png" alt="mouse corsair" class="mouse">
+        </div>
+      
+        <div class="contentBox">
+          <h3>Mouse Corsair M65</h3>
+          <h2 class="price">61.<small>98</small> €</h2>
+          <a href="#" class="buy">Buy Now</a>
+        </div>
+      
+    </div>
+    </div>
+
+      <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
